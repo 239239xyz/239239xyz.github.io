@@ -1,0 +1,936 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="DaoKe">
+  <meta name="keywords" content="DaoKe">
+  
+    <meta name="description" content="daoke">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DaoKe">
+<meta property="og:url" content="https://239239xyz.github.io/page/6/index.html">
+<meta property="og:site_name" content="DaoKe">
+<meta property="og:description" content="daoke">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DaoKe">
+<meta property="article:tag" content="DaoKe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>DaoKe</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"239239xyz.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>DaoKe</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://picshack.net/ib/ACeWfyq55i.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="简单记录只是怕忘记"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2021/02/15/40/" target="_self">
+          N1 Armbian 安装 docker 并启用 OpenWrt
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/02/15/40/" target="_self">
+        <div>
+          安装 docker（这一步建议处于低调上网环境，否则可能会下载慢甚至失败） curl -fsSL https://get.docker.com bash  拉取镜像这里使用的 F 大的镜像，感谢！原帖地址 docker pull unifreq&#x2F;openwrt-aarch64   默认拉取最新的镜像  打开网卡的混杂模式 ip link set eth0 promisc on   复制
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-15 18:40" pubdate>
+              2021-02-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/openwrt/">#openwrt</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2021/02/05/39/" target="_self">
+          GitHub 克隆太慢的解决方法
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/02/05/39/" target="_self">
+        <div>
+          在克隆GitHub上的代码的时候，直接克隆会很慢如 1git clone https://github.com/lxk0301/jd_scripts.git  只需要在com后面加.cnpmjs.org如 1git clone https://github.com.cnpmjs.org/lxk0301/jd_scripts.git
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-02-06 07:42" pubdate>
+              2021-02-06
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2021/01/30/37/" target="_self">
+          lnmp+froxlor
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/01/30/37/" target="_self">
+        <div>
+          安装LNMPwget http://soft.vpser.net/lnmp/lnmp1.7.tar.gz -cO lnmp1.7.tar.gz &amp;&amp; tar zxf lnmp1.7.tar.gz &amp;&amp; cd lnmp1.7 &amp;&amp; .&#x2F;install.sh lnmp 安装froxlorcd &#x2F;home&#x2F;wwwroot&#x
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-31 06:26" pubdate>
+              2021-01-31
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2021/01/25/36/" target="_self">
+          VPS性能测试脚本
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/01/25/36/" target="_self">
+        <div>
+          bensh.sh测试的内容包括VPS系统基本信息、全球各知名数据中心的测试点的速度（支持IPv6）以及IO 测试。 使用方法： 1wget -qO- bench.sh  bash  SuperBench.shSuperBench.sh是在bench.sh的基础上发展而来的，也可以测试VPS系统基本信息和IO性能，不过将测速节点换成了国内节点。 使用方法： 1wget -qO- git.io/sup
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-25 22:14" pubdate>
+              2021-01-25
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2021/01/16/35/" target="_self">
+          Debian 8安装vnStat统计vps流量
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2021/01/16/35/" target="_self">
+        <div>
+          安装vnStat apt-get install vnstat #apt安装vnstat -u -i eth0 #生成流量统计数据库 ‘eth0’用’ip a’命令查看systemctl stop vnstat #停止 vnStat 服务chown vnstat:vnstat &#x2F;var&#x2F;lib&#x2F;vnstat&#x2F;.eth0 #修改 .eth0 文件的权限syst
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-01-16 22:04" pubdate>
+              2021-01-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/12/17/32/" target="_self">
+          Debian8小内存环境安装Caddy+PHP5+SQLite3
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/12/17/32/" target="_self">
+        <div>
+          Debian8小内存环境安装Caddy+PHP5+SQLite30、前言最近入手了Gullo的128M内存小鸡，因为内存太小，故一直在找Debian8能用的一键环境安装脚本，LNMP肯定是安装不上了，编译安装一半的时候，就已经报错了，所以编译安装这条路算是走不通了。
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-17 20:29" pubdate>
+              2020-12-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90/" class="category-chain-item">网络资源</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Debian/">#Debian</a>
+            
+              <a href="/tags/Caddy/">#Caddy</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/12/17/31/" target="_self">
+          谷歌云ssh开启root密码登录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/12/17/31/" target="_self">
+        <div>
+          谷歌云ssh开启root密码登录修改配置1.先选择从浏览器打开ssh连接服务器连接登录成功后，输入以下命令sudo -i #切换到rootpasswd #修改密码然后会要求输入新密码，然后再重复一次密码，输入密码的时候不会显示出来，所以直接输入密码，然后回车，再然后重复输入密码回车。修改root密码完成
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-17 20:22" pubdate>
+              2020-12-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90/" class="category-chain-item">网络资源</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E8%B0%B7%E6%AD%8C%E4%BA%91/">#谷歌云</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/12/17/30/" target="_self">
+          Linux VPS常用命令集合备忘录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/12/17/30/" target="_self">
+        <div>
+          Linux VPS常用命令集合备忘录常用命令 更改root密码 passwd root  mv命令 移动文件（把abc.tar.gz移动到backup目录）
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-17 20:19" pubdate>
+              2020-12-17
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/vps%E5%91%BD%E4%BB%A4/">#vps命令</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/12/14/29/" target="_self">
+          bbr加速脚本合集
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/12/14/29/" target="_self">
+        <div>
+          wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot;chmod +x tcp.sh./tcp.sh
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-14 22:21" pubdate>
+              2020-12-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/bbr/">#bbr</a>
+            
+              <a href="/tags/%E8%84%9A%E6%9C%AC/">#脚本</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/12/14/28/" target="_self">
+          speedtest-x
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/12/14/28/" target="_self">
+        <div>
+          apt update &amp;&amp; apt install curlcurl -sSL https://get.docker.com/ shdocker run -d -p 8008:80 badapple9/speedtest-x
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-12-14 21:56" pubdate>
+              2020-12-14
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/speedtest/">#speedtest</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/5/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/#board">7</a><a class="page-number" href="/page/8/#board">8</a><a class="extend next" rel="next" href="/page/7/#board"><i class="iconfont icon-arrowright"></i></a>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

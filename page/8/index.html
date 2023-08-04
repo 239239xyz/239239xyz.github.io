@@ -1,0 +1,903 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="DaoKe">
+  <meta name="keywords" content="DaoKe">
+  
+    <meta name="description" content="daoke">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DaoKe">
+<meta property="og:url" content="https://239239xyz.github.io/page/8/index.html">
+<meta property="og:site_name" content="DaoKe">
+<meta property="og:description" content="daoke">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DaoKe">
+<meta property="article:tag" content="DaoKe">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>DaoKe</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"239239xyz.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>DaoKe</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://picshack.net/ib/ACeWfyq55i.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="简单记录只是怕忘记"></span>
+          
+        </div>
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      <div class="container nopadding-x-md">
+        <div id="board"
+          style="margin-top: 0">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                
+
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/10/13/" target="_self">
+          N1 ARMBIAN 固定MAC
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/10/13/" target="_self">
+        <div>
+          winscp编辑网卡etc&#x2F;network&#x2F;interfaces，在iface eth0 inet dhcp下添加一行并保存 1pre-up ifconfig eth0 hw ether 1A:33:E6:90:1F:27
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-10 23:48" pubdate>
+              2020-10-10
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/09/12/" target="_self">
+          动态域名解析dns
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/09/12/" target="_self">
+        <div>
+          https://github.com/NewFuture/DDNS 12345git clone https://github.com/NewFuture/DDNScd DDNS./run.py #运行一次 生成config.json配置文件vi config.json #修改 id 域名 token./task.sh  然后运行命令crontab -e ,将脚本加入定时运行中 1crontab
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-09 22:24" pubdate>
+              2020-10-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DDNS/">#DDNS</a>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/">#动态域名解析</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/08/11/" target="_self">
+          玩客云宝塔5.9版本
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/08/11/" target="_self">
+        <div>
+          第一步宝塔5.9版本wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; bash install.sh 安装完成后记着账户和密码
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-09 02:10" pubdate>
+              2020-10-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/08/9/" target="_self">
+          花生壳5.0 for 树莓派
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/08/9/" target="_self">
+        <div>
+          一、下载在花生壳下载页面，找到树莓派5.0并下载。将安装包下载到本地电脑后，可以通过WinSCP等工具将安装包传输到树莓派中。 二、安装注意：安装花生壳前，需输入命令：sudo -s 切换到管理员权限。1、使用cd命令进入安装包所在的文件路径，输入安装命令：dpkg -i 安装包名称。回车，等待安装完成。如： dpkg -i phtunnel_5_0_rapi_aarch64.deb 安装成功后，
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-09 02:07" pubdate>
+              2020-10-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DDNS/">#DDNS</a>
+            
+              <a href="/tags/%E5%8A%A8%E6%80%81%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90/">#动态域名解析</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/08/8/" target="_self">
+          ArmBian做ZeroTier内网穿透
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/08/8/" target="_self">
+        <div>
+          Linux最简单的安装方法： 1curl -s https://install.zerotier.com/  sudo bash  无任何报错显示： 1*** Waiting for identity generation...  * Success! You are ZeroTier address [ d56f99571f ].把zerotier服务复制到系统服务目录并激活 123system
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-09 02:03" pubdate>
+              2020-10-09
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/07/clypbp/" target="_self">
+           ArmBian做ZeroTier内网穿透
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/07/clypbp/" target="_self">
+        <div>
+          Linux 最简单的安装方法： 1curl -s https://install.zerotier.com/ | sudo bash
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-08 00:00" pubdate>
+              2020-10-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/ArmBian/" class="category-chain-item">ArmBian</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/ArmBian/DDNS/" class="category-chain-item">DDNS</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/ArmBian/">#ArmBian</a>
+            
+              <a href="/tags/ddns/">#ddns</a>
+            
+              <a href="/tags/ZeroTier/">#ZeroTier</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/03/7/" target="_self">
+          利用宝塔面板实现阿里云DDNS更新
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/03/7/" target="_self">
+        <div>
+          由于我的N1在Armbian上安装了宝塔面板，并架设了NextCloud(性能低下)所以还是装了Cloudreve，利用IPv6实现外网的便捷访问。Docker使用仅仅是为了DDNS还是很浪费资源的。所以就使用宝塔的计划任务来实现吧！ 其中的更新时间建议每天执行，当然也可以更频繁些，例如N小时一次。 1234567891011121314151617181920212223242526272829
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-03 23:23" pubdate>
+              2020-10-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DDNS/">#DDNS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/03/5/" target="_self">
+          N1刷入Armbian后换软件源、安装Docker并提速
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/03/5/" target="_self">
+        <div>
+          网络环境所限，在使用Armbian的时候经常下载软件出问题，下载不到或者下载中断，所以找来了国内的源，更换一下，下载会变快很多。 假定armbian已经安装完成 1、打开putty，输入N1的IP地址连接并登陆 2、输入命令 1nano /etc/apt/sources.list  复制代码3、在原先的源前面加#号注释掉，并将国内源复制过去 12345deb http://mirrors.ustc
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-03 23:13" pubdate>
+              2020-10-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/n1/">#n1</a>
+            
+              <a href="/tags/arnbian/">#arnbian</a>
+            
+              <a href="/tags/docker/">#docker</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2020/10/03/3/" target="_self">
+          n1 Armbian CloudFlare DDNS IPV6
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2020/10/03/3/" target="_self">
+        <div>
+          .&#x2F;install.sh …… 123# reboot 重启设备# poweroff 关闭设备# apt update &amp;&amp; apt upgrade -y  关闭或重启设备时将U盘拔出,就可以进入安装到 EMMC 的系统了. 如果要配置和使用无线可以用 nmtui, 至少还有个界面看 如果没有公网 IP 可以使用 Frp 等工具来打洞: Frp 有公网就直接上 DDNS
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-10-03 23:04" pubdate>
+              2020-10-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%BB%98%E8%AE%A4%E5%88%86%E7%B1%BB/" class="category-chain-item">默认分类</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/DDNS/">#DDNS</a>
+            
+              <a href="/tags/n1/">#n1</a>
+            
+              <a href="/tags/CloudFlare/">#CloudFlare</a>
+            
+              <a href="/tags/IPV6/">#IPV6</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+
+
+  <nav aria-label="navigation">
+    <span class="pagination" id="pagination">
+      <a class="extend prev" rel="prev" href="/page/7/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#board">6</a><a class="page-number" href="/page/7/#board">7</a><span class="page-number current">8</span>
+    </span>
+  </nav>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

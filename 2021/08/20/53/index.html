@@ -1,0 +1,656 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="DaoKe">
+  <meta name="keywords" content="DaoKe">
+  
+    <meta name="description" content="一、Cron表达式的组成 其实就是一组时间序列，一个由6个空格7个域组成的字符串，排序如下： 1[秒] [分] [时] [日] [月] [周] [年]">
+<meta property="og:type" content="article">
+<meta property="og:title" content="定时任务cron表达式的填写规则介绍">
+<meta property="og:url" content="https://239239xyz.github.io/2021/08/20/53/index.html">
+<meta property="og:site_name" content="DaoKe">
+<meta property="og:description" content="一、Cron表达式的组成 其实就是一组时间序列，一个由6个空格7个域组成的字符串，排序如下： 1[秒] [分] [时] [日] [月] [周] [年]">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-20T20:15:00.000Z">
+<meta property="article:modified_time" content="2023-08-04T04:59:35.396Z">
+<meta property="article:author" content="DaoKe">
+<meta property="article:tag" content="定时任务">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>定时任务cron表达式的填写规则介绍 - DaoKe</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"239239xyz.github.io","root":"/","version":"1.9.5-a","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>DaoKe</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://picshack.net/ib/ACeWfyq55i.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="定时任务cron表达式的填写规则介绍"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2021-08-21 04:15" pubdate>
+          2021年8月21日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          17 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">定时任务cron表达式的填写规则介绍</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>一、Cron表达式的组成</p>
+<p>其实就是一组时间序列，一个由6个空格7个域组成的字符串，排序如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-attr">[秒]</span> <span class="hljs-selector-attr">[分]</span> <span class="hljs-selector-attr">[时]</span> <span class="hljs-selector-attr">[日]</span> <span class="hljs-selector-attr">[月]</span> <span class="hljs-selector-attr">[周]</span> <span class="hljs-selector-attr">[年]</span><br></code></pre></td></tr></table></figure>
+<span id="more"></span>
+<p>二、Cron每个域（时间）的相关定义，用表格梳理比较明了。<br>域 是否必填 值以及范围 通配符</p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs subunit">秒    是    0<span class="hljs-string">-59</span>    , – * /<br>分    是    0<span class="hljs-string">-59</span>    , – * /<br>时    是    0<span class="hljs-string">-23</span>    , – * /<br>日    是    1<span class="hljs-string">-31</span>    , – * ? / L W<br>月    是    1<span class="hljs-string">-12</span> 或 JAN-DEC    , – * /<br>周    是    1<span class="hljs-string">-7</span> 或 SUN-SAT    , – * ? / L #<br>年    否    1970<span class="hljs-string">-2099</span>    , – * /<br></code></pre></td></tr></table></figure>
+
+<p>Cron表达式<br>通配符的含义：</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs awk">,：表示在两个及以上的时间点中都执行。如在月中的值为<span class="hljs-number">1</span>,<span class="hljs-number">3</span>，则表示<span class="hljs-number">1</span>月和<span class="hljs-number">3</span>月都触发事件<br>*：表示匹配该域任意值，可解读为 “每”，如小时的字段为*时，表示每一小时都触发事件<br>?：表示不指定值，用于日期和星期字段之间进行互斥。通常在日期和星期字段中的一个指定值，另外一个用?表示不指定值。使用的场景为不需要关心当前设置这个字段的值。例如:要在每月的<span class="hljs-number">6</span>号触发一个操作，但不关心是周几，我们可以这么设置 <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">6</span> * ?<br>-：表示范围，一个连续触发的区间。如：时的值为<span class="hljs-number">6</span>-<span class="hljs-number">8</span>，则表示<span class="hljs-number">6</span>-<span class="hljs-number">8</span>小时中的每个小时都触发事件。<br><span class="hljs-regexp">/：表示间隔时间触发事件（开始时间/</span>时间间隔）。其中第一部分是起始值，除了秒以外都会降低一个单位，比如在 “秒” 上定义 <span class="hljs-number">5</span>/<span class="hljs-number">10</span> 表示从 第 <span class="hljs-number">5</span> 秒开始 每 <span class="hljs-number">10</span> 秒执行一次，而在 “分” 上则表示从 第 <span class="hljs-number">5</span> 秒开始 每 <span class="hljs-number">10</span> 分钟执行一次。<br><span class="hljs-comment">#：表示该月第n个星期x(x#n)，仅用星期域。如：星期：6#3，表示该月的第三个星期五。</span><br>L：表示LAST 最后（最后一天或最后一个星期几）；仅出现在日和星期的域中。用在日则表示该月的最后一天，用在星期则表示该月的最后一个星期X。如：星期域上的值为<span class="hljs-number">5</span>L，则表示该月最后一个星期的星期四。在使用<span class="hljs-string">&#x27;L&#x27;</span>时，不要指定列表<span class="hljs-string">&#x27;,&#x27;</span>或范围<span class="hljs-string">&#x27;-&#x27;</span>，否则易导致出现意料之外的结果。<br>W：仅用在日的域中，表示距离当月给定日期最近的工作日（周一到周五）。 如：<span class="hljs-string">&quot;4W&quot;</span>表示距离<span class="hljs-number">4</span>号最近的工作日（当月的）触发事件； （<span class="hljs-number">1</span>）当<span class="hljs-number">4</span>号就是工作日时，则表示当天触发；当<span class="hljs-number">4</span>号为周六时，则表示<span class="hljs-number">3</span>号（周五）触发； （<span class="hljs-number">2</span>）当<span class="hljs-number">4</span>号为周日时，则表示在<span class="hljs-number">5</span>号（周一）触发； 再如：<span class="hljs-string">&quot;1W&quot;</span>表示距离<span class="hljs-number">1</span>号最近的工作日触发事件，但是，该工作日只算当月的。假如当月<span class="hljs-number">1</span>号是周六，则”<span class="hljs-number">1</span>W“表示在当月<span class="hljs-number">3</span>号（周一）触发事件。就算上个月的最后一天是工作日，也不会触发事件。<br>LW：‘L’和<span class="hljs-string">&#x27;W&#x27;</span>可以一起组合在日字段使用。表示当月的最后一个工作日触发事件。<br></code></pre></td></tr></table></figure>
+
+<p>三、举个例子（要足够多）</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs tap">*/5 * * * * ? 每隔<span class="hljs-number"> 5 </span>秒执行一次<br>0 */1 * * * ? 每隔<span class="hljs-number"> 1 </span>分钟执行一次<br>0<span class="hljs-number"> 0 </span>2<span class="hljs-number"> 1 </span>* ? * 每月<span class="hljs-number"> 1 </span>日的凌晨<span class="hljs-number"> 2 </span>点执行一次<br>0<span class="hljs-number"> 15 </span>10 ? * MON-FRI 周一到周五每天上午 10：15 执行作业<br>0<span class="hljs-number"> 15 </span>10 ? 6L 2002-2006<span class="hljs-number"> 2002 </span>年至<span class="hljs-number"> 2006 </span>年的每个月的最后一个星期五上午 10:15 执行作业<br>0<span class="hljs-number"> 0 </span>23 * * ? 每天<span class="hljs-number"> 23 </span>点执行一次<br>0<span class="hljs-number"> 0 </span>1 * * ? 每天凌晨<span class="hljs-number"> 1 </span>点执行一次<br>0<span class="hljs-number"> 0 </span>1<span class="hljs-number"> 1 </span>* ? 每月<span class="hljs-number"> 1 </span>日凌晨<span class="hljs-number"> 1 </span>点执行一次<br>0<span class="hljs-number"> 0 </span>23 L * ? 每月最后一天<span class="hljs-number"> 23 </span>点执行一次<br>0<span class="hljs-number"> 0 </span>1 ? * L 每周星期天凌晨<span class="hljs-number"> 1 </span>点执行一次<br>0 26,29,33 * * * ? 在<span class="hljs-number"> 26 </span>分、29 分、33 分执行一次<br>0<span class="hljs-number"> 0 </span>0,13,18,21 * * ? 每天的<span class="hljs-number"> 0 </span>点、13 点、18 点、21 点都执行一次<br>0<span class="hljs-number"> 0 </span>10,14,16 * * ? 每天上午<span class="hljs-number"> 10 </span>点，下午<span class="hljs-number"> 2 </span>点，4 点执行一次<br>0 0/30 9-17 * * ? 朝九晚五工作时间内每半小时执行一次<br>0<span class="hljs-number"> 0 </span>12 ? * WED 每个星期三中午<span class="hljs-number"> 12 </span>点执行一次<br>0<span class="hljs-number"> 0 </span>12 * * ? 每天中午<span class="hljs-number"> 12 </span>点触发<br>0<span class="hljs-number"> 15 </span>10 ? * * 每天上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10 * * ? 每天上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10 * * ? * 每天上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10 * * ?<span class="hljs-number"> 2005 </span>2005 年的每天上午 10:15 触发<br>0 *<span class="hljs-number"> 14 </span>* * ? 每天下午<span class="hljs-number"> 2 </span>点到 2:59 期间的每<span class="hljs-number"> 1 </span>分钟触发<br>0 0/5<span class="hljs-number"> 14 </span>* * ? 每天下午<span class="hljs-number"> 2 </span>点到 2:55 期间的每<span class="hljs-number"> 5 </span>分钟触发<br>0 0/5 14,18 * * ? 每天下午<span class="hljs-number"> 2 </span>点到 2:55 期间和下午<span class="hljs-number"> 6 </span>点到 6:55 期间的每<span class="hljs-number"> 5 </span>分钟触发<br>0 0-5<span class="hljs-number"> 14 </span>* * ? 每天下午<span class="hljs-number"> 2 </span>点到 2:05 期间的每<span class="hljs-number"> 1 </span>分钟触发<br>0 10,44<span class="hljs-number"> 14 </span>?<span class="hljs-number"> 3 </span>WED 每年三月的星期三的下午 2:10 和 2:44 触发<br>0<span class="hljs-number"> 15 </span>10 ? * MON-FRI 周一至周五的上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10<span class="hljs-number"> 15 </span>* ? 每月<span class="hljs-number"> 15 </span>日上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10 L * ? 每月最后一日的上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10 ? * 6L 每月的最后一个星期五上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10 ? * 6L 2002-2005<span class="hljs-number"> 2002 </span>年至<span class="hljs-number"> 2005 </span>年的每月的最后一个星期五上午 10:15 触发<br>0<span class="hljs-number"> 15 </span>10 ? * 6<span class="hljs-comment">#3 每月的第三个星期五上午 10:15 触发</span><br></code></pre></td></tr></table></figure>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90/" class="category-chain-item">网络资源</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/" class="print-no-link">#定时任务</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>定时任务cron表达式的填写规则介绍</div>
+      <div>https://239239xyz.github.io/2021/08/20/53/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>DaoKe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2021年8月21日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/08/22/54/" title="Debian添加swap">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Debian添加swap</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/08/17/52/" title="甲骨文ubuntu20.04安装了宝塔无法打开面板">
+                        <span class="hidden-mobile">甲骨文ubuntu20.04安装了宝塔无法打开面板</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
